@@ -16,15 +16,22 @@
   }
 
   onMount(() => {
-    if (!('IntersectionObserver' in window)) {return}
-    const observer = new IntersectionObserver(function(entries) {
-      if (entries[0].intersectionRatio === 0) {
-        adamIsObserving = true;
-      } else if (entries[0].intersectionRatio === 1) {
-        adamIsObserving = false;
-      }
-    }, { threshold: [0,1] });
-    observer.observe(document.querySelector('.adam-is-doing-experiments-on-people'));
+    if (!('IntersectionObserver' in window)) {
+      return;
+    }
+    const observer = new IntersectionObserver(
+      function(entries) {
+        if (entries[0].intersectionRatio === 0) {
+          adamIsObserving = true;
+        } else if (entries[0].intersectionRatio === 1) {
+          adamIsObserving = false;
+        }
+      },
+      {threshold: [0, 1]}
+    );
+    observer.observe(
+      document.querySelector('.adam-is-doing-experiments-on-people')
+    );
   });
 </script>
 
@@ -74,8 +81,6 @@
     background-color: #252525;
   }
 
-
-
   @media only screen and (min-width: 768px) {
     .toggler {
       display: none;
@@ -100,14 +105,16 @@
       justify-content: center;
     }
 
-    .adam--is-observing .logo{
+    .adam--is-observing .logo {
       display: none;
     }
   }
 </style>
 
-<div class="adam-is-doing-experiments-on-people"></div>
-<header class="header {active ? 'nav-is-open' : ''} {adamIsObserving ? 'adam--is-observing' : ''}">
+<div class="adam-is-doing-experiments-on-people" />
+<header
+  class="header {active ? 'nav-is-open' : ''}
+  {adamIsObserving ? 'adam--is-observing' : ''}">
 
   <div class="header__inner">
     <a href="." class="logo">

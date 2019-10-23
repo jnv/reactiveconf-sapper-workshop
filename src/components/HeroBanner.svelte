@@ -93,7 +93,9 @@
   }
 </style>
 
-<div class="hero-banner {themeBannerFullHeight ? 'hero-banner--full-height' : ''} {bannerImg}">
+<div
+  class="hero-banner {themeBannerFullHeight ? 'hero-banner--full-height' : ''}
+  {bannerImg}">
   <h1>{bannerTitle}</h1>
   <p>{bannerSubtitle}</p>
   {#if hasButton}

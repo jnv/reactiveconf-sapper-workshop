@@ -1,8 +1,8 @@
 import send from '@polka/send';
-import {getProducts} from '../../cms'
+import {getProducts} from '../../cms';
 
 export async function get(req, res) {
-  const productsResponse = await getProducts()
+  const productsResponse = await getProducts();
   const groupedPosts = productsResponse.results.reduce(reduceCategories, {});
   send(res, 200, JSON.stringify(groupedPosts), {
     'Cache-Control': `max-age=0, s-max-age=${600}`, // 10 minutes

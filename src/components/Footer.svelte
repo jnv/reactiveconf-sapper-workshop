@@ -3,7 +3,6 @@
 </script>
 
 <style>
-
   section {
     background-color: #f4f4f4;
   }

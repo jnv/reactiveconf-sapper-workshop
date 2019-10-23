@@ -1,10 +1,8 @@
-
-
 # Serverless Sapper for Now v2 - template
 
 Sapper demo by [@antony](https://github.com/antony)
 
-This is a demonstration of a Dynamic (i.e. not Static / Exported) [Sapper Template](https://github.com/sveltejs/sapper-template) to Now v2, using the [Now Sapper](https://github.com/thgh/now-sapper) builder. 
+This is a demonstration of a Dynamic (i.e. not Static / Exported) [Sapper Template](https://github.com/sveltejs/sapper-template) to Now v2, using the [Now Sapper](https://github.com/thgh/now-sapper) builder.
 We @socialbakers added a "Café" design and template and connection to CMS.
 
 Static assets from your application are served from the now CDN.

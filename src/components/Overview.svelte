@@ -1,5 +1,4 @@
 <style>
-
   .overview-grid {
     padding: 54px 0;
     display: grid;

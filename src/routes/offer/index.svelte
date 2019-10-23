@@ -223,7 +223,8 @@
 </svelte:head>
 
 <HeroBanner
-  bannerSubtitle="Check out our premium meal offers, whether you look for snack or lunch"
+  bannerSubtitle="Check out our premium meal offers, whether you look for snack
+  or lunch"
   bannerTitle="Offer"
   bannerImg="offer" />
 
