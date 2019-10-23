@@ -45,7 +45,7 @@
 </style>
 
 <section>
-  <Title title="Reserve a Table" subTitle="OPEN HOURS" theme="title-white" />
+  <Title title="Reserve a Table" subTitle="Open Hours" theme="title-white" />
 
   <p class="info">Monday – Friday: 10 AM – 11 PM</p>
 

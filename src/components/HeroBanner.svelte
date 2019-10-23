@@ -75,16 +75,16 @@
     margin-bottom: 24px;
   }
 
-  .hero-banner--full-height h1 {
+  .full-height h1 {
     font-size: 36px;
   }
 
   @media only screen and (min-width: 768px) {
-    .hero-banner--full-height {
+    .full-height {
       height: 100vh;
     }
 
-    .hero-banner--full-height h1 {
+    .full-height h1 {
       font-size: 108px;
     }
 
@@ -95,8 +95,8 @@
 </style>
 
 <div
-  class="hero-banner {themeBannerFullHeight ? 'hero-banner--full-height' : ''}
-  {bannerImg}">
+  class="hero-banner {bannerImg}"
+  class:full-height={themeBannerFullHeight}>
   <h1 in:fade={{delay: 400, duration: 400}} out:fade={{duration: 400}}>
     {bannerTitle}
   </h1>
