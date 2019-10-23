@@ -1,7 +1,13 @@
 {
-  "name": "sappertemplate",
-  "description": "Sapper Website Template",
+  "name": "reactiveconf-sapper-workshop",
+  "description": "Project for Sapper & Svelte workshop at ReactiveConf 2019",
+  "private": true,
   "version": "0.0.2",
+  "contributors": [
+    "Adam Sobotka <adam.sobotka@socialbakers.com>",
+    "Peter Popluhar <peter.popluhar@socialbakers.com>",
+    "Jan Vlnas <jan.vlnas@socialbakers.com>"
+  ],
   "engines": {
     "node": "10.x",
     "npm": "^6"

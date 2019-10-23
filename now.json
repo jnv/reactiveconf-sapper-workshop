@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "name": "test-v2-qa",
+  "name": "reactiveconf-sapper-workshop",
   "builds": [{"src": "package.json", "use": "now-sapper"}],
-  "regions": ["lhr"]
+  "regions": ["arn", "bru", "cdg", "lhr"],
+  "public": true
 }
