@@ -2,6 +2,10 @@
   "name": "sappertemplate",
   "description": "Sapper Website Template",
   "version": "0.0.2",
+  "engines": {
+    "node": "10.x",
+    "npm": "^6"
+  },
   "scripts": {
     "dev": "sapper dev",
     "build": "ls && sapper build",
