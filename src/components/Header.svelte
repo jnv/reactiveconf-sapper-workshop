@@ -5,10 +5,10 @@
   import {onMount} from 'svelte';
 
   let active = false;
-  let adamIsObserving;
+  let isIntersecting = false;
 
   function handleClick() {
-    active === true ? (active = false) : (active = true);
+    active ? (active = false) : (active = true);
   }
 
   function closeMobileNav() {
@@ -22,16 +22,14 @@
     const observer = new IntersectionObserver(
       function(entries) {
         if (entries[0].intersectionRatio === 0) {
-          adamIsObserving = true;
+          isIntersecting = true;
         } else if (entries[0].intersectionRatio === 1) {
-          adamIsObserving = false;
+          isIntersecting = false;
         }
       },
       {threshold: [0, 1]}
     );
-    observer.observe(
-      document.querySelector('.adam-is-doing-experiments-on-people')
-    );
+    observer.observe(document.querySelector('.intersection-guard'));
   });
 </script>
 
@@ -77,7 +75,7 @@
     transform: translateX(0);
   }
 
-  .adam--is-observing {
+  .is-intersecting {
     background-color: #252525;
   }
 
@@ -105,16 +103,17 @@
       justify-content: center;
     }
 
-    .adam--is-observing .logo {
+    .is-intersecting .logo {
       display: none;
     }
   }
 </style>
 
-<div class="adam-is-doing-experiments-on-people" />
+<div class="intersection-guard" />
 <header
-  class="header {active ? 'nav-is-open' : ''}
-  {adamIsObserving ? 'adam--is-observing' : ''}">
+  class="header"
+  class:nav-is-open={active}
+  class:is-intersecting={isIntersecting}>
 
   <div class="header__inner">
     <a href="." class="logo">
@@ -122,7 +121,6 @@
     </a>
     <div class="nav">
       <Nav {segment} on:click={closeMobileNav} />
-
     </div>
 
     <div class="toggler">
