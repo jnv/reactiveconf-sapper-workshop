@@ -2,7 +2,7 @@
   import OpenHours from '../components/OpenHours.svelte';
   import CTA from '../components/CTA.svelte';
   import Title from '../components/PageTitle.svelte';
-  import HeroBanner from '../components/Banner.svelte';
+  import HeroBanner from '../components/HeroBanner.svelte';
 </script>
 
 <style>

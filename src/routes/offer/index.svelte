@@ -10,10 +10,10 @@
 </script>
 
 <script>
-  import PageTitle from '../../components/PageTitle.svelte';
   import {fade} from 'svelte/transition';
+  import PageTitle from '../../components/PageTitle.svelte';
   import Product from '../../components/Products.svelte';
-  import HeroBanner from '../../components/Banner.svelte';
+  import HeroBanner from '../../components/HeroBanner.svelte';
   export let posts;
 
   let current;
