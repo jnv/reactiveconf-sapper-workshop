@@ -1,3 +1,4 @@
+import {URL} from 'url';
 import fetch from 'node-fetch';
 
 const BASE_URL =
