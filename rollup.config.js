@@ -27,6 +27,9 @@ export default {
       replace({
         'process.browser': true,
         'process.env.NODE_ENV': JSON.stringify(mode),
+        'process.env.TRACKING_ID': JSON.stringify(
+          process.env.TRACKING_ID || ''
+        ),
       }),
       json(),
       svelte({
