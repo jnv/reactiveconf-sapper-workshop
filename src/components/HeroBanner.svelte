@@ -1,4 +1,5 @@
 <script>
+  import {fade, blur} from 'svelte/transition';
   import CTA from '../components/CTA.svelte';
 
   export let bannerTitle;
@@ -96,8 +97,12 @@
 <div
   class="hero-banner {themeBannerFullHeight ? 'hero-banner--full-height' : ''}
   {bannerImg}">
-  <h1>{bannerTitle}</h1>
-  <p>{bannerSubtitle}</p>
+  <h1 in:fade={{delay: 400, duration: 400}} out:fade={{duration: 400}}>
+    {bannerTitle}
+  </h1>
+  <p transition:blur={{delay: 400, duration: 400, amount: 10}}>
+    {bannerSubtitle}
+  </p>
   {#if hasButton}
     <CTA linkHref="#" linkTheme="link-light" linkTitle="Book a table" />
   {/if}

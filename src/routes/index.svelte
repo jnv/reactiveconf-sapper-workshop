@@ -2,7 +2,6 @@
   import HeroBanner from '../components/HeroBanner.svelte';
   import Overview from '../components/Overview.svelte';
   import OpenHours from '../components/OpenHours.svelte';
-  import {fade} from 'svelte/transition';
 </script>
 
 <style>
